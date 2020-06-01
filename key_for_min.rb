@@ -3,22 +3,25 @@
         # return [] if name_hash.empty?
         
         # the_name = name_hash.collect {|key, value| value.
-def key_for_min_value(hash)
-  lowest_key = nil 
-  lowest_value = Float::INFINITY
-  hash.each do |k, v|
-    if v < lowest_value
-      lowest_value = v 
-      lowest_key = k
-    end 
-  end 
-end
+# def key_for_min_value(hash)
+#   lowest_key = nil 
+#   lowest_value = Float::INFINITY
+#   hash.each do |k, v|
+#     if v < lowest_value
+#       lowest_value = v 
+#       lowest_key = k
+#     end 
+#   end 
+# end
 
 def key_for_min_value(hash)
   lowest_key = nil 
   lowest_value = Float::INFINITY 
-  hash.each do |k, v| if v < lowest_value lowest_value = v lowest_key = k 
-end 
-end 
-lowest_key 
+  hash.each do |k, v| 
+    if v < lowest_value 
+      lowest_value = v 
+      lowest_key = k 
+    end 
+  end 
+  lowest_key 
 end 
